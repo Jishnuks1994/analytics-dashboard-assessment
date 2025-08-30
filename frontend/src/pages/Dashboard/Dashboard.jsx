@@ -94,10 +94,10 @@ function Dashboard() {
                     )}
                     <div className="grid grid-cols-2 py-2 gap-2">
                         {cityLabels.length > 0 && (
-                            <BarChart labels={cityLabels} sales={citySales} />
+                            <BarChart title={'EV Sales by City'} labels={cityLabels} sales={citySales} />
                         )}
                         {makerLabels.length > 0 && (
-                            <BarChart labels={makerLabels} sales={makerCounts} horizontal />
+                            <BarChart title={'Top Sellers'} labels={makerLabels} sales={makerCounts} horizontal />
                         )}
                     </div>
                 </div>

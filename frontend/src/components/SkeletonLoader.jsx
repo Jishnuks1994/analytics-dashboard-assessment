@@ -8,7 +8,7 @@ const SkeletonLoader = ({ rows = 5, cols = 4 }) => {
                 {[...Array(cols)].map((_, i) => (
                     <div
                         key={i}
-                        className="h-20 bg-gray-200 rounded-lg"
+                        className="h-20 bg-zinc-900 rounded-lg"
                     ></div>
                 ))}
             </div>
@@ -16,13 +16,13 @@ const SkeletonLoader = ({ rows = 5, cols = 4 }) => {
             {/* Charts & Table placeholders */}
             <div className="grid sm:grid-cols-2 p-2 gap-2">
                 <div className="space-y-4">
-                    <div className="h-60 bg-gray-200 rounded-lg"></div>
+                    <div className="h-60 bg-zinc-900 rounded-lg"></div>
                     <div className="grid grid-cols-2 gap-2">
-                        <div className="h-40 bg-gray-200 rounded-lg"></div>
-                        <div className="h-40 bg-gray-200 rounded-lg"></div>
+                        <div className="h-40 bg-zinc-900 rounded-lg"></div>
+                        <div className="h-40 bg-zinc-900 rounded-lg"></div>
                     </div>
                 </div>
-                <div className="h-96 bg-gray-200 rounded-lg"></div>
+                <div className="h-96 bg-zinc-900 rounded-lg"></div>
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ const DataTable = ({ data, rowsPerPage = 10}) => {
     const handleNext = () => setPage((p) => Math.min(p + 1, totalPages));
 
     return (
-        <div className="rounded-2xl bg-white  p-4 shadow ">
+        <div className="rounded-2xl bg-zinc-900  p-4 shadow ">
             {/* Search Input */}
             <div className="mb-4 flex justify-between items-center">
                 <input
@@ -50,9 +50,9 @@ const DataTable = ({ data, rowsPerPage = 10}) => {
             </div>
 
             {/* Table */}
-            <div className="overflow-x-auto border rounded-lg shadow">
+            <div className="overflow-x-auto border rounded-lg shadow webkit-scrollbar">
                 <table className="min-w-full border-collapse">
-                    <thead className="bg-gray-100">
+                    <thead className="bg-zinc-900">
                         <tr>
                             {headers.map((header, i) => (
                                 <th
@@ -68,7 +68,7 @@ const DataTable = ({ data, rowsPerPage = 10}) => {
                         {paginatedRows.map((row, rowIndex) => (
                             <tr
                                 key={rowIndex}
-                                className="odd:bg-white even:bg-gray-50 hover:bg-gray-100"
+                                className="odd:bg-zinc-700 even:bg-zinc-800 hover:bg-zinc-900"
                             >
                                 {row.map((cell, cellIndex) => (
                                     <td

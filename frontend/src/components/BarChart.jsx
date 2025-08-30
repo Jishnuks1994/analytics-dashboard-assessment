@@ -29,8 +29,8 @@ function getRandomColors(count) {
     return colors;
 }
 
-export default function BarChart({ labels, sales, horizontal = false }) {
-    const barColors = horizontal ? getRandomColors(sales.length) : 'rgba(75,192,192,0.7)';
+export default function BarChart({ labels, sales,title, horizontal = false }) {
+    const barColors = horizontal ? getRandomColors(sales.length) : 'rgba(75,192,192,1)';
     const data = {
         labels: labels,
         datasets: [
@@ -47,12 +47,12 @@ export default function BarChart({ labels, sales, horizontal = false }) {
         responsive: true,
         plugins: {
             legend: { position: 'top' },
-            title: { display: true, text: 'EV Sales by City' },
+            title: { display: true, text: title, color: '#ffffff' }
         },
         scales: {
             x: {
                 grid: { color: '#e0e0e0' },
-                ticks: { autoSkip: false } // show all city labels
+                ticks: { autoSkip: false },
             },
             y: {
                 grid: { color: '#e0e0e0' },
@@ -62,7 +62,7 @@ export default function BarChart({ labels, sales, horizontal = false }) {
     };
 
     return (
-        <div className='rounded-2xl bg-white  p-4 shadow '>
+        <div className='rounded-2xl bg-zinc-900  p-4 shadow '>
             <Bar data={data} options={options} height={300}/>
         </div>
     );
