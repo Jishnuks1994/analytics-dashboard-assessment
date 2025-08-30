@@ -42,5 +42,7 @@ export default function LineChart({ labels, registrations }) {
         },
     };
 
-    return <div className='rounded-2xl bg-white  p-4 shadow'><Line data={data} options={options} /></div>;
+    return <div className='rounded-2xl bg-white  p-4 shadow'>
+        <Line data={data} options={options} />
+    </div>;
 }

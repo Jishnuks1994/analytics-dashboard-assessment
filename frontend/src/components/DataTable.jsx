@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 
-const DataTable = ({ data, rowsPerPage = 10 }) => {
+const DataTable = ({ data, rowsPerPage = 10}) => {
     if (!data || data.length === 0) return <p>No data available</p>;
 
     const headers = data[0]; // first row = headers

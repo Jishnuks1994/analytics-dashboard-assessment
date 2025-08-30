@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Card({ title, value }) {
-  if (!title && !value) return <div className="rounded-2xl bg-white p-4 shadow" />
   return (
     <div className="rounded-2xl bg-white p-4 shadow">
       <div className="text-md font-medium">{title}</div>
