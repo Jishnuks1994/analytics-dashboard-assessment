@@ -18,19 +18,32 @@ ChartJS.register(
     Legend
 );
 
-export default function BarChart({ labels, sales }) {
+function getRandomColors(count) {
+    const colors = [];
+    for (let i = 0; i < count; i++) {
+        const hue = Math.floor(Math.random() * 360);  
+        const saturation = Math.floor(Math.random() * 30 + 70); 
+        const lightness = Math.floor(Math.random() * 20 + 50); 
+        colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
+    }
+    return colors;
+}
+
+export default function BarChart({ labels, sales, horizontal = false }) {
+    const barColors = horizontal ? getRandomColors(sales.length) : 'rgba(75,192,192,0.7)';
     const data = {
-        labels: labels, // cities
+        labels: labels,
         datasets: [
             {
                 label: 'EVs Sold',
                 data: sales,
-                backgroundColor: 'rgba(75,192,192,0.7)',
+                backgroundColor: barColors,
             },
         ],
     };
 
     const options = {
+        indexAxis: horizontal ? 'y' : 'x',
         responsive: true,
         plugins: {
             legend: { position: 'top' },
